@@ -1,0 +1,94 @@
+@use "variables" as *;
+@use "fonts" as *;
+@use "mixins" as *;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Avenir Next", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+}
+
+.defaultAvatar {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: -4px;
+  @include tablet {
+    order: 3;
+    margin-left: 20px;
+  }
+}
+
+.header {
+  @include flex(column);
+  padding: 1rem;
+
+  @include tablet {
+    padding: 1.5rem 2.5rem;
+    flex-direction: row;
+    align-items: center;
+  }
+  @include desktop {
+    padding: 1.5rem 7rem;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    height: 2.3rem;
+    margin: 1rem 0 2rem 0;
+    @include tablet {
+      margin: 0;
+      height: 1.6rem;
+      margin-right: 78px;
+    }
+  }
+  &__form-container {
+    @include flex(row);
+    margin-bottom: 1rem;
+    @include tablet {
+      margin: 0;
+      align-items: center;
+    }
+  }
+}
+
+.form__search {
+  background-image: url("../../assets/images/search.svg");
+  background-repeat: no-repeat;
+  background-position-x: 7px;
+  background-position-y: 11px;
+  padding: 0.75rem;
+  border-radius: 0.25rem;
+  border: solid 1px $mercury;
+  width: 77%;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  background-color: $alabaster;
+  color: black;
+
+  @include tablet {
+    width: 230px;
+    margin: 0;
+    margin-right: 25px;
+    padding: 0.7rem;
+    padding-left: 25px;
+    background-position-x: 1rem;
+  }
+  &::placeholder {
+    padding-left: 20px;
+    color: black;
+    @include tablet {
+      font-size: 0.9rem;
+    }
+  }
+  &:focus {
+    outline: none;
+    color: black;
+    border-color: black;
+  }
+}
