@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import VideoPost from "./components/VideoPost/VideoPost";
 import VideoList from "./components/VideoList/VideoList";
 import VideoDetails from "./components/VideoDetails/VideoDetails";
+import CommentsForm from "./components/CommentsForm/CommentsForm";
 function App() {
   const vData = videosData;
   const detailsData = dData;
@@ -16,6 +17,7 @@ function App() {
       <main className="main">
         <VideoPost selectedVideo={selectedVideo} />
         <VideoDetails selectedVideo={selectedVideo} />
+        <CommentsForm selectedVideo={selectedVideo} />
         <VideoList selectedVideo={selectedVideo} videoData={vData} />
       </main>
     </>
