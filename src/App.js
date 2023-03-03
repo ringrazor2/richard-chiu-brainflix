@@ -4,16 +4,18 @@ import dData from "./data/video-details.json";
 import Header from "./components/Header/Header";
 import VideoPost from "./components/VideoPost/VideoPost";
 import VideoList from "./components/VideoList/VideoList";
+import VideoDetails from "./components/VideoDetails/VideoDetails";
 function App() {
   const vData = videosData;
   const detailsData = dData;
-  const [selectedVideo, setSelectedVideo] = useState(videosData[0]);
+  const [selectedVideo, setSelectedVideo] = useState(detailsData[0]);
 
   return (
     <>
       <Header />
       <main className="main">
         <VideoPost selectedVideo={selectedVideo} />
+        <VideoDetails selectedVideo={selectedVideo} />
         <VideoList selectedVideo={selectedVideo} videoData={vData} />
       </main>
     </>
