@@ -22,11 +22,11 @@ const Header = () => {
               alt="Default avatar"
             ></img>
             <button className="header__button">
-              <img
+              {/* <img
                 className="header__button-icon"
                 src={uploadIcon}
                 alt="upload icon"
-              />
+              /> */}
               <p className="header__button-text">UPLOAD</p>
             </button>
           </div>
