@@ -1,6 +1,6 @@
-import "./VideoContentList.scss";
+import "./VideoContent.scss";
 
-const VideoContentList = ({
+const VideoContent = ({
   videoContentTitle,
   videoContentChannel,
   videoContentImage,
@@ -13,21 +13,21 @@ const VideoContentList = ({
   return (
     <>
       <div
-        className="videoListContent-mainContainer"
+        className="videoContent-mainContainer"
         onClick={() => handleClick(videoContentId)}
       >
         <img
           src={videoContentImage}
           alt="bike trick s thumbnail"
-          className="videoListContent__image"
+          className="videoContent__image"
         ></img>
-        <div className="videoListContent-textContainer">
-          <h4 className="videoListContent__title">{videoContentTitle}</h4>
-          <p className="videoListContent__channel">{videoContentChannel}</p>
+        <div className="videoContent-textContainer">
+          <h4 className="videoContent__title">{videoContentTitle}</h4>
+          <p className="videoContent__channel">{videoContentChannel}</p>
         </div>
       </div>
     </>
   );
 };
 
-export default VideoContentList;
+export default VideoContent;

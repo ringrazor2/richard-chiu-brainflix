@@ -1,5 +1,5 @@
 import "./VideoList.scss";
-import VideoContentList from "../VideoContentList/VideoContentList";
+import VideoContent from "../VideoContent/VideoContent";
 
 const VideoList = ({ videoData, selectedVideo, updateVideo, detailsData }) => {
   const inactiveVideos = videoData.filter((vids) => {
@@ -10,7 +10,7 @@ const VideoList = ({ videoData, selectedVideo, updateVideo, detailsData }) => {
       <h3 className="videoList__title">Next Videos</h3>
       {inactiveVideos.map((videoObj) => {
         return (
-          <VideoContentList
+          <VideoContent
             key={videoObj.id}
             videoContentTitle={videoObj.title}
             videoContentChannel={videoObj.channel}
