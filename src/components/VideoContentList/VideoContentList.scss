@@ -10,7 +10,7 @@
   }
   &__image {
     height: 70px;
-    width: 120px;
+    width: 140px;
     border-radius: 4px;
     object-fit: cover;
     margin-right: 10px;
@@ -24,7 +24,13 @@
     font-size: 13px;
   }
   &__title {
+    display: -webkit-box;
     font-weight: 600;
     margin-bottom: 1rem;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
