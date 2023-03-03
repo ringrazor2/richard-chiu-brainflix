@@ -1,12 +1,12 @@
 import "./VideoPost.scss";
 
-const VideoPost = (props) => {
+const VideoPost = ({ selectedVideo }) => {
   return (
     <div className="videoPost-container">
       <video
         className="videoPost"
         controls
-        poster={props.selectedVideo.image}
+        poster={selectedVideo.image}
       ></video>
     </div>
   );

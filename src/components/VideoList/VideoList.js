@@ -1,9 +1,9 @@
 import "./VideoList.scss";
 import VideoContentList from "../VideoContentList/VideoContentList";
 
-const VideoList = (props) => {
-  const inactiveVideos = props.videoData.filter((vids) => {
-    return vids.id !== props.selectedVideo.id;
+const VideoList = ({ videoData, selectedVideo, updateVideo, detailsData }) => {
+  const inactiveVideos = videoData.filter((vids) => {
+    return vids.id !== selectedVideo.id;
   });
   return (
     <section className="videoList">
@@ -11,13 +11,13 @@ const VideoList = (props) => {
       {inactiveVideos.map((videoObj) => {
         return (
           <VideoContentList
+            key={videoObj.id}
             videoContentTitle={videoObj.title}
             videoContentChannel={videoObj.channel}
             videoContentImage={videoObj.image}
-            key={videoObj.id}
             videoContentId={videoObj.id}
-            updateVideo={props.updateVideo}
-            detailsData={props.detailsData}
+            updateVideo={updateVideo}
+            detailsData={detailsData}
           />
         );
       })}
