@@ -16,8 +16,10 @@ function App() {
       <Header />
       <main className="main">
         <VideoPost selectedVideo={selectedVideo} />
-        <VideoDetails selectedVideo={selectedVideo} />
-        <CommentsForm />
+        <div className="videoInformation">
+          <VideoDetails selectedVideo={selectedVideo} />
+          <CommentsForm />
+        </div>
         <VideoList selectedVideo={selectedVideo} videoData={vData} />
       </main>
     </>
