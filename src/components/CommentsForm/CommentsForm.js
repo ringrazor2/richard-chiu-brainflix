@@ -14,16 +14,18 @@ const CommentsForm = () => {
           ></img>
         </div>
         <div className="commentsForm__main-container">
-          <label className="commentsForm__label" for="comment">
-            JOIN THE CONVERSATION
-          </label>
-          <input
-            className="commentsForm__input"
-            type="text"
-            placeholder="Add a new comment"
-          ></input>
+          <div className="commentsForm__input-container">
+            <label className="commentsForm__label" htmlFor="comment">
+              JOIN THE CONVERSATION
+            </label>
+            <input
+              className="commentsForm__input"
+              type="text"
+              placeholder="Add a new comment"
+            ></input>
+          </div>
           <button className="commentsForm__button">
-            <p className="commentsForm_button-text">COMMENT</p>
+            <p className="commentsForm__button-text">COMMENT</p>
           </button>
         </div>
       </form>

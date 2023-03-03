@@ -14,7 +14,7 @@ const VideoList = (props) => {
             videoContentTitle={videoObj.title}
             videoContentChannel={videoObj.channel}
             videoContentImage={videoObj.image}
-            videoContentKey={videoObj.id}
+            key={videoObj.id}
             videoContentId={videoObj.id}
           />
         );

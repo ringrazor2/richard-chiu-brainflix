@@ -8,6 +8,9 @@
   justify-content: space-between;
   &-container {
     padding: 0 1rem 1rem 1rem;
+    @include tablet {
+      padding: 0 3rem 1rem 3rem;
+    }
   }
   &__amount {
     font-size: 13px;
@@ -18,6 +21,9 @@
     @include flex(column);
     margin-left: 10px;
     width: 100%;
+    @include tablet {
+      flex-direction: row;
+    }
   }
   &__label {
     font-size: 13px;
@@ -26,18 +32,33 @@
     margin-bottom: 4px;
   }
   &__input {
-    margin-bottom: 1rem;
     padding: 0.5rem;
     padding-bottom: 3.5rem;
     background-color: $alabaster;
     border: solid 1px $mercury;
+    width: 100%;
+
+    @include tablet {
+      padding-bottom: 0.5rem;
+    }
 
     &:active {
       border: 2px solid $flixBlue;
     }
+
+    &-container {
+      margin-bottom: 1rem;
+      @include tablet {
+        width: 64%;
+        margin-right: 2rem;
+        margin-bottom: 0;
+      }
+    }
   }
   &__avatar {
-    margin-top: 21px;
+    margin-top: 1.31rem;
+    margin-left: 0;
+    margin-right: 1rem;
   }
   &__button {
     @include flex(row);
@@ -55,18 +76,19 @@
     border-radius: 0.375rem;
     justify-content: center;
     @include tablet {
-      width: 9.81rem;
-      order: 2;
-      padding: 0.65rem;
+      width: 30%;
+      height: 40px;
+      margin-top: 20px;
     }
     &-text {
       font-weight: 600;
       font-size: 0.875rem;
       align-self: center;
-      position: relative;
       @include tablet {
         font-size: 0.9rem;
-        left: 15%;
+        height: 52%;
+        padding-bottom: 1rem;
+        font-size: 12px;
       }
     }
     &:hover {
