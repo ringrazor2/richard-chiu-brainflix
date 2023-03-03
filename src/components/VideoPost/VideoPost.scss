@@ -1,0 +1,18 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.videoPost {
+  width: 100%;
+  &-container {
+    width: 100%;
+    margin-bottom: 1rem;
+    @include tablet {
+      background-color: black;
+      padding: 0 2.5rem;
+    }
+    @include desktop {
+      padding: 0 7rem;
+    }
+  }
+}
