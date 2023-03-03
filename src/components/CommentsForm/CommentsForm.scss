@@ -1,3 +1,76 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.commentsForm {
+  @include flex(row);
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  &-container {
+    padding: 0 1rem 1rem 1rem;
+  }
+  &__amount {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  &__main-container {
+    @include flex(column);
+    margin-left: 10px;
+    width: 100%;
+  }
+  &__label {
+    font-size: 13px;
+    color: $silver;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  &__input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    padding-bottom: 3.5rem;
+    background-color: $alabaster;
+    border: solid 1px $mercury;
+
+    &:active {
+      border: 2px solid $flixBlue;
+    }
+  }
+  &__avatar {
+    margin-top: 21px;
+  }
+  &__button {
+    @include flex(row);
+    background-color: $flixBlue;
+    background-image: url("../../assets/images/add_comment.svg");
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-position-y: 54%;
+    background-size: 1.25rem;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 0.375rem;
+    justify-content: center;
+    @include tablet {
+      width: 9.81rem;
+      order: 2;
+      padding: 0.65rem;
+    }
+    &-text {
+      font-weight: 600;
+      font-size: 0.875rem;
+      align-self: center;
+      position: relative;
+      @include tablet {
+        font-size: 0.9rem;
+        left: 15%;
+      }
+    }
+    &:hover {
+      background-color: $flixDarkBlue;
+    }
+  }
+}

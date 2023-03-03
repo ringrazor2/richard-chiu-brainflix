@@ -17,7 +17,7 @@ function App() {
       <main className="main">
         <VideoPost selectedVideo={selectedVideo} />
         <VideoDetails selectedVideo={selectedVideo} />
-        <CommentsForm selectedVideo={selectedVideo} />
+        <CommentsForm />
         <VideoList selectedVideo={selectedVideo} videoData={vData} />
       </main>
     </>
