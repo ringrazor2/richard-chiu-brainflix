@@ -1,0 +1,14 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.videoList {
+  padding: 1rem;
+  border-top: 2px solid $mercury;
+
+  &__title {
+    color: $silver;
+    font-weight: 500;
+    margin-bottom: 1rem;
+  }
+}

@@ -1,0 +1,30 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.videoListContent {
+  &-mainContainer {
+    @include flex(row);
+    flex-wrap: nowrap;
+    margin-bottom: 1rem;
+  }
+  &__image {
+    height: 70px;
+    width: 120px;
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  &-textContainer {
+    width: 55%;
+  }
+  &__title,
+  &__channel {
+    font-size: 13px;
+  }
+  &__title {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
