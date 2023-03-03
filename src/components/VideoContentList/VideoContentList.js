@@ -1,6 +1,6 @@
 import "./VideoContentList.scss";
 
-const VideoListContent = (props) => {
+const VideoContentList = (props) => {
   return (
     <>
       <img
@@ -16,4 +16,4 @@ const VideoListContent = (props) => {
   );
 };
 
-export default VideoListContent;
+export default VideoContentList;

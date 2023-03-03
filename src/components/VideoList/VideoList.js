@@ -1,12 +1,16 @@
 import "./VideoList.scss";
+import VideoContentList from "../VideoContentList/VideoContentList";
 
 const VideoList = (props) => {
+  const inactiveVideos = props.videoData.filter((vids) => {
+    return vids.id !== props.selectedVideo.id;
+  });
   return (
     <section className="videoList">
       <h3 className="videoList__title">Next Videos</h3>
-      {props.selectedVideo.map((videoObj) => {
+      {inactiveVideos.map((videoObj) => {
         return (
-          <VideoListContent
+          <VideoContentList
             videoContentTitle={videoObj.title}
             videoContentChannel={videoObj.channel}
             videoContentImage={videoObj.image}
