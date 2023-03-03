@@ -11,6 +11,13 @@ function App() {
   const detailsData = dData;
   const [selectedVideo, setSelectedVideo] = useState(detailsData[0]);
 
+  const updateVideo = (id) => {
+    const clickedVideo = detailsData.find((vid) => {
+      return vid.id === id;
+    });
+    setSelectedVideo(clickedVideo);
+  };
+
   return (
     <>
       <Header />
@@ -20,7 +27,12 @@ function App() {
           <VideoDetails selectedVideo={selectedVideo} />
           <CommentsForm />
         </div>
-        <VideoList selectedVideo={selectedVideo} videoData={vData} />
+        <VideoList
+          selectedVideo={selectedVideo}
+          videoData={vData}
+          updateVideo={updateVideo}
+          detailsData={detailsData}
+        />
       </main>
     </>
   );

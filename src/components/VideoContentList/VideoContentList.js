@@ -1,9 +1,15 @@
 import "./VideoContentList.scss";
 
 const VideoContentList = (props) => {
+  const handleClick = (video) => {
+    props.updateVideo(video);
+  };
   return (
     <>
-      <div className="videoListContent-mainContainer">
+      <div
+        className="videoListContent-mainContainer"
+        onClick={() => handleClick(props.videoContentId)}
+      >
         <img
           src={props.videoContentImage}
           alt="bike tricks thumbnail"

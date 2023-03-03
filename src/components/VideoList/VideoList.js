@@ -16,6 +16,8 @@ const VideoList = (props) => {
             videoContentImage={videoObj.image}
             key={videoObj.id}
             videoContentId={videoObj.id}
+            updateVideo={props.updateVideo}
+            detailsData={props.detailsData}
           />
         );
       })}
