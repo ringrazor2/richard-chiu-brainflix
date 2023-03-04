@@ -1,6 +1,8 @@
 import { useState } from "react";
 import videosData from "./data/videos.json";
 import dData from "./data/video-details.json";
+import "./Main.scss";
+import "./VideoInformation.scss";
 import Header from "./components/Header/Header";
 import VideoPost from "./components/VideoPost/VideoPost";
 import VideoList from "./components/VideoList/VideoList";
@@ -21,8 +23,8 @@ function App() {
   return (
     <>
       <Header />
+      <VideoPost selectedVideo={selectedVideo} />
       <main className="main">
-        <VideoPost selectedVideo={selectedVideo} />
         <div className="videoInformation">
           <VideoDetails selectedVideo={selectedVideo} />
           <CommentsForm />

@@ -24,6 +24,9 @@
     @include tablet {
       width: 30%;
     }
+    @include desktop {
+      width: 53%;
+    }
   }
   &__title,
   &__channel {
