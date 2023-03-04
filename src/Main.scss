@@ -6,5 +6,6 @@
   @include desktop {
     @include flex(row);
     flex-wrap: nowrap;
+    @include maxWidth();
   }
 }
