@@ -4,6 +4,10 @@
 
 .videoPost {
   width: 100%;
+
+  @include desktop {
+    height: 485px;
+  }
   &-container {
     width: 100%;
     margin-bottom: 1rem;
@@ -13,6 +17,7 @@
     }
     @include desktop {
       padding: 0 13rem;
+      margin-bottom: 0;
     }
   }
 }

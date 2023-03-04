@@ -7,12 +7,12 @@
   padding: 1rem;
 
   @include tablet {
-    padding: 1.5rem 2.5rem;
+    padding: 1rem 2.5rem;
     flex-direction: row;
     align-items: center;
   }
   @include desktop {
-    padding: 1.5rem 7rem;
+    padding: 1rem 7rem;
     justify-content: space-between;
     @include maxWidth();
   }
@@ -37,7 +37,7 @@
       align-items: center;
     }
     @include desktop {
-      margin-right: 1.125rem;
+      margin-right: 2.25rem;
     }
   }
   &__button {

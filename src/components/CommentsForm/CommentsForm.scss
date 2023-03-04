@@ -11,6 +11,9 @@
     @include tablet {
       padding: 0 3rem 1rem 3rem;
     }
+    @include desktop {
+      padding: 1.5rem 0 0 7rem;
+    }
   }
   &__amount {
     font-size: 13px;
@@ -27,7 +30,7 @@
   }
   &__label {
     font-size: 13px;
-    color: $mercury;
+    color: $silver;
     font-weight: 600;
     margin-bottom: 4px;
   }
