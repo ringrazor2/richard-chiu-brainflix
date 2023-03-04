@@ -2,7 +2,7 @@ import "./VideoPost.scss";
 
 const VideoPost = ({ selectedVideo }) => {
   return (
-    <div className="videoPost-container">
+    <div className="videoPost-container" id="videoPost">
       <video
         className="videoPost"
         controls

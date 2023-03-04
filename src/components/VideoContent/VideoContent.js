@@ -12,20 +12,22 @@ const VideoContent = ({
   };
   return (
     <>
-      <div
-        className="videoContent-mainContainer"
-        onClick={() => handleClick(videoContentId)}
-      >
-        <img
-          src={videoContentImage}
-          alt="bike trick s thumbnail"
-          className="videoContent__image"
-        ></img>
-        <div className="videoContent-textContainer">
-          <h4 className="videoContent__title">{videoContentTitle}</h4>
-          <p className="videoContent__channel">{videoContentChannel}</p>
+      <a href="#videoPost">
+        <div
+          className="videoContent-mainContainer"
+          onClick={() => handleClick(videoContentId)}
+        >
+          <img
+            src={videoContentImage}
+            alt="bike trick s thumbnail"
+            className="videoContent__image"
+          ></img>
+          <div className="videoContent-textContainer">
+            <h4 className="videoContent__title">{videoContentTitle}</h4>
+            <p className="videoContent__channel">{videoContentChannel}</p>
+          </div>
         </div>
-      </div>
+      </a>
     </>
   );
 };
