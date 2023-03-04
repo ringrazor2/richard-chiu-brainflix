@@ -6,9 +6,19 @@
   padding: 1rem;
   border-top: 2px solid $mercury;
 
+  @include tablet {
+    padding: 1rem 0;
+    margin: 0 3rem;
+  }
+
   &__title {
     color: $silver;
     font-weight: 500;
     margin-bottom: 1rem;
+
+    @include tablet {
+      font-size: 14px;
+      margin-bottom: 1.5rem;
+    }
   }
 }

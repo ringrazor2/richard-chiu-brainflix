@@ -7,21 +7,27 @@
     @include flex(row);
     flex-wrap: nowrap;
     margin-bottom: 1rem;
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
   }
   &__image {
     height: 70px;
     width: 140px;
     border-radius: 4px;
     object-fit: cover;
-    margin-right: 10px;
+    margin-right: 17px;
     cursor: pointer;
   }
   &-textContainer {
     width: 55%;
+    @include tablet {
+      width: 30%;
+    }
   }
   &__title,
   &__channel {
-    font-size: 13px;
+    font-size: 14px;
   }
   &__title {
     display: -webkit-box;

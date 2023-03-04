@@ -27,7 +27,7 @@
   }
   &__label {
     font-size: 13px;
-    color: $silver;
+    color: $mercury;
     font-weight: 600;
     margin-bottom: 4px;
   }
@@ -67,7 +67,7 @@
     background-repeat: no-repeat;
     background-position: 5%;
     background-position-y: 54%;
-    background-size: 1.25rem;
+    background-size: 1.2rem;
     color: white;
     width: 100%;
     cursor: pointer;
@@ -76,7 +76,7 @@
     border-radius: 0.375rem;
     justify-content: center;
     @include tablet {
-      width: 30%;
+      width: 27%;
       height: 40px;
       margin-top: 20px;
     }
