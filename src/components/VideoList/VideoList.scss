@@ -3,11 +3,12 @@
 @use "../../styles/partials/mixins" as *;
 
 .videoList {
-  padding: 1rem;
-  border-top: 2px solid $mercury;
+  padding: 1rem 0;
+  margin: 0 1rem;
+  border-top: 1px solid $mercury;
 
   @include tablet {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     margin: 0 3rem;
   }
 

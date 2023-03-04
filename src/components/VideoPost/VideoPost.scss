@@ -4,10 +4,12 @@
 
 .videoPost {
   width: 100%;
-
+  @include tablet {
+    height: 385px;
+  }
   @include desktop {
-    height: 485px;
     @include maxWidth();
+    height: 485px;
   }
   &-container {
     width: 100%;

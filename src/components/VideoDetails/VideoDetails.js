@@ -13,7 +13,7 @@ const VideoDetails = (props) => {
             By {props.selectedVideo.channel}
           </p>
           <p className="videoDetails__date">
-            {stringDate(props.selectedVideo.timestamp)}
+            {stringDateFull(props.selectedVideo.timestamp)}
           </p>
         </div>
         <div className="videoDetails__stats-right">
@@ -34,9 +34,12 @@ const VideoDetails = (props) => {
   );
 };
 
-function stringDate(dateCode) {
+function stringDateFull(dateCode) {
   const date = new Date(dateCode);
-  const dateString = date.toLocaleDateString();
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  const dateString = `${month}/${day}/${year}`;
   return dateString;
 }
 export default VideoDetails;

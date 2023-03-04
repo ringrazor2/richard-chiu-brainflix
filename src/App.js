@@ -7,7 +7,7 @@ import Header from "./components/Header/Header";
 import VideoPost from "./components/VideoPost/VideoPost";
 import VideoDetails from "./components/VideoDetails/VideoDetails";
 import CommentsForm from "./components/CommentsForm/CommentsForm";
-import Comments from "./components/Comments/Comments";
+import CommentsList from "./components/CommentsList/CommentsList";
 import VideoList from "./components/VideoList/VideoList";
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
         <div className="videoInformation">
           <VideoDetails selectedVideo={selectedVideo} />
           <CommentsForm />
-          <Comments />
+          <CommentsList selectedVideo={selectedVideo} />
         </div>
         <VideoList
           selectedVideo={selectedVideo}

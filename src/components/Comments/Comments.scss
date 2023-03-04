@@ -8,8 +8,12 @@
   flex-wrap: nowrap;
   border-top: 1px solid $mercury;
   padding: 1rem 0;
-  margin: 0 1.5rem;
+  margin: 0 1rem;
 
+  @include tablet {
+    margin: 0 3rem;
+    padding: 1.5rem 1rem 1.5rem 1.5rem;
+  }
   @include desktop {
     @include flex(row);
     width: 60%;
