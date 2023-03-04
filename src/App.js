@@ -5,9 +5,11 @@ import "./Main.scss";
 import "./VideoInformation.scss";
 import Header from "./components/Header/Header";
 import VideoPost from "./components/VideoPost/VideoPost";
-import VideoList from "./components/VideoList/VideoList";
 import VideoDetails from "./components/VideoDetails/VideoDetails";
 import CommentsForm from "./components/CommentsForm/CommentsForm";
+import Comments from "./components/Comments/Comments";
+import VideoList from "./components/VideoList/VideoList";
+
 function App() {
   const vData = videosData;
   const detailsData = dData;
@@ -28,6 +30,7 @@ function App() {
         <div className="videoInformation">
           <VideoDetails selectedVideo={selectedVideo} />
           <CommentsForm />
+          <Comments />
         </div>
         <VideoList
           selectedVideo={selectedVideo}

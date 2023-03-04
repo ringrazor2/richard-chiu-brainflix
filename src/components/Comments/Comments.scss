@@ -1,0 +1,60 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.comments {
+  @include flex(row);
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  border-top: 1px solid $mercury;
+  padding: 1rem 0;
+  margin: 0 1.5rem;
+
+  @include desktop {
+    @include flex(row);
+    width: 60%;
+    border-top-width: 90%;
+  }
+
+  &__avatar {
+    &-container {
+      margin-right: 1.25rem;
+      @include desktop {
+        padding-top: 1.5rem;
+      }
+    }
+    &-placeHolder {
+      background-color: $mercury;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+    }
+  }
+  &__nameDate-container {
+    @include flex(row);
+    justify-content: space-between;
+    margin-bottom: 0.625rem;
+    width: 100%;
+  }
+  &__main {
+    width: 90%;
+    @include desktop {
+      width: 87%;
+    }
+  }
+  &__name {
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  &__date {
+    color: $mercury;
+    font-weight: 600;
+    font-size: 0.875rem;
+  }
+  &__content {
+    font-size: 0.875rem;
+    &-container {
+      margin-bottom: 0.625rem;
+    }
+  }
+}
