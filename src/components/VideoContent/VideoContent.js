@@ -9,25 +9,24 @@ const VideoContent = ({
 }) => {
   const handleClick = (video) => {
     updateVideo(video);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
   return (
     <>
-      <a href="#videoPost">
-        <div
-          className="videoContent-mainContainer"
-          onClick={() => handleClick(videoContentId)}
-        >
-          <img
-            src={videoContentImage}
-            alt="bike trick s thumbnail"
-            className="videoContent__image"
-          ></img>
-          <div className="videoContent-textContainer">
-            <h4 className="videoContent__title">{videoContentTitle}</h4>
-            <p className="videoContent__channel">{videoContentChannel}</p>
-          </div>
+      <div
+        className="videoContent-mainContainer"
+        onClick={() => handleClick(videoContentId)}
+      >
+        <img
+          src={videoContentImage}
+          alt="bike trick s thumbnail"
+          className="videoContent__image"
+        ></img>
+        <div className="videoContent-textContainer">
+          <h4 className="videoContent__title">{videoContentTitle}</h4>
+          <p className="videoContent__channel">{videoContentChannel}</p>
         </div>
-      </a>
+      </div>
     </>
   );
 };
