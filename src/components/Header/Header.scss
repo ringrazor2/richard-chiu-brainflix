@@ -83,40 +83,39 @@
       background-color: $flixDarkBlue;
     }
   }
-}
-
-.form__search {
-  background-image: url("../../assets/images/search.svg");
-  background-repeat: no-repeat;
-  background-position-x: 0.4375rem;
-  background-position-y: 0.6875rem;
-  padding: 0.625rem;
-  border-radius: 0.25rem;
-  border: solid 1px $mercury;
-  width: 80%;
-  margin-right: 1rem;
-  margin-bottom: 1rem;
-  background-color: $alabaster;
-  color: black;
-
-  @include tablet {
-    width: 14.9rem;
-    margin: 0;
-    margin-right: 1.56rem;
-    padding: 0.7rem;
-    padding-left: 1.56rem;
-    background-position-x: 1rem;
-  }
-  &::placeholder {
-    padding-left: 1.5rem;
+  &__form-search {
+    background-image: url("../../assets/images/search.svg");
+    background-repeat: no-repeat;
+    background-position-x: 0.4375rem;
+    background-position-y: 0.6875rem;
+    padding: 0.625rem;
+    border-radius: 0.25rem;
+    border: solid 1px $mercury;
+    width: 80%;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-color: $alabaster;
     color: black;
+
     @include tablet {
-      font-size: 0.9rem;
+      width: 14.9rem;
+      margin: 0;
+      margin-right: 1.56rem;
+      padding: 0.7rem;
+      padding-left: 1.56rem;
+      background-position-x: 1rem;
     }
-  }
-  &:focus {
-    outline: none;
-    color: black;
-    border-color: black;
+    &::placeholder {
+      padding-left: 1.5rem;
+      color: black;
+      @include tablet {
+        font-size: 0.9rem;
+      }
+    }
+    &:focus {
+      outline: none;
+      color: black;
+      border-color: black;
+    }
   }
 }

@@ -1,7 +1,6 @@
 import "./Header.scss";
 import logo from "../../assets/images/BrainFlix-logo.svg";
 import mohan from "../../assets/images/Mohan-muruge.jpg";
-import uploadIcon from "../../assets/images/upload.svg";
 
 const Header = () => {
   return (
@@ -11,7 +10,7 @@ const Header = () => {
         <form className="header__form">
           <div className="header__form-container">
             <input
-              className="form__search"
+              className="header__form-search"
               type="search"
               name="search"
               placeholder="Search"
@@ -22,11 +21,6 @@ const Header = () => {
               alt="Default avatar"
             ></img>
             <button className="header__button">
-              {/* <img
-                className="header__button-icon"
-                src={uploadIcon}
-                alt="upload icon"
-              /> */}
               <p className="header__button-text">UPLOAD</p>
             </button>
           </div>
