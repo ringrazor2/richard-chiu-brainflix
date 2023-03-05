@@ -1,0 +1,11 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.main {
+  @include desktop {
+    @include flex(row);
+    flex-wrap: nowrap;
+    @include maxWidth();
+  }
+}

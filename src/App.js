@@ -5,10 +5,6 @@ import "./Main.scss";
 import "./VideoInformation.scss";
 import Header from "./components/Header/Header";
 import VideoPost from "./components/VideoPost/VideoPost";
-import VideoDetails from "./components/VideoDetails/VideoDetails";
-import CommentsForm from "./components/CommentsForm/CommentsForm";
-import CommentsList from "./components/CommentsList/CommentsList";
-import VideoList from "./components/VideoList/VideoList";
 
 function App() {
   const vData = videosData;
@@ -26,19 +22,7 @@ function App() {
     <>
       <Header />
       <VideoPost selectedVideo={selectedVideo} />
-      <main className="main">
-        <div className="videoInformation">
-          <VideoDetails selectedVideo={selectedVideo} />
-          <CommentsForm />
-          <CommentsList selectedVideo={selectedVideo} />
-        </div>
-        <VideoList
-          selectedVideo={selectedVideo}
-          videoData={vData}
-          updateVideo={updateVideo}
-          detailsData={detailsData}
-        />
-      </main>
+      <Main />
     </>
   );
 }
