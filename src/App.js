@@ -1,8 +1,7 @@
+import "./App.scss";
 import { useState } from "react";
 import videosData from "./data/videos.json";
 import dData from "./data/video-details.json";
-import "./Main.scss";
-import "./VideoInformation.scss";
 import Header from "./components/Header/Header";
 import VideoPost from "./components/VideoPost/VideoPost";
 import VideoDetails from "./components/VideoDetails/VideoDetails";
