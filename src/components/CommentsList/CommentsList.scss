@@ -1,3 +1,9 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.commentsList {
+  @include desktop {
+    margin-bottom: 3rem;
+  }
+}

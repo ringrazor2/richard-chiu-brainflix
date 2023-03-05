@@ -5,7 +5,7 @@
 .commentsForm {
   @include flex(row);
   flex-wrap: nowrap;
-  justify-content: space-between;
+
   &-container {
     padding: 0 1rem 1rem 1rem;
     @include tablet {
@@ -13,6 +13,7 @@
     }
     @include desktop {
       padding: 1.5rem 0 0 7rem;
+      margin-bottom: 1rem;
     }
   }
   &__amount {
@@ -37,7 +38,6 @@
   &__input {
     padding: 0.5rem;
     padding-bottom: 3.5rem;
-    background-color: $alabaster;
     border: solid 1px $mercury;
     width: 100%;
     border-radius: 4px;
