@@ -13,11 +13,11 @@
   }
   &__image {
     height: auto;
-    width: 140px;
-    height: 70px;
+    width: 8.75rem;
+    height: 4.375rem;
     border-radius: 4px;
     object-fit: cover;
-    margin-right: 17px;
+    margin-right: 1.06rem;
     cursor: pointer;
   }
   &-textContainer {
@@ -31,12 +31,12 @@
   }
   &__title,
   &__channel {
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   &__title {
     display: -webkit-box;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0.875rem;
     white-space: wrap;
     overflow: hidden;
     text-overflow: ellipsis;

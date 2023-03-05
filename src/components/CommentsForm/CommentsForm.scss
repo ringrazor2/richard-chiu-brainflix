@@ -16,20 +16,20 @@
     }
   }
   &__amount {
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 600;
     margin-bottom: 1rem;
   }
   &__main-container {
     @include flex(column);
-    margin-left: 10px;
+    margin-left: 0.625rem;
     width: 100%;
     @include tablet {
       flex-direction: row;
     }
   }
   &__label {
-    font-size: 13px;
+    font-size: 0.8125rem;
     color: $silver;
     font-weight: 600;
     margin-bottom: 4px;
@@ -81,8 +81,8 @@
     justify-content: center;
     @include tablet {
       width: 27%;
-      height: 40px;
-      margin-top: 20px;
+      height: 2.5rem;
+      margin-top: 1.25rem;
     }
     &-text {
       font-weight: 600;
@@ -92,7 +92,7 @@
         font-size: 0.9rem;
         height: 52%;
         padding-bottom: 1rem;
-        font-size: 12px;
+        font-size: 0.75rem;
       }
     }
     &:hover {

@@ -54,6 +54,9 @@
     color: $mercury;
     font-weight: 600;
     font-size: 0.875rem;
+    @include tablet {
+      font-weight: 500;
+    }
   }
   &__content {
     font-size: 0.875rem;
