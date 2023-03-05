@@ -40,6 +40,7 @@
     background-color: $alabaster;
     border: solid 1px $mercury;
     width: 100%;
+    border-radius: 4px;
 
     @include tablet {
       padding-bottom: 0.5rem;
