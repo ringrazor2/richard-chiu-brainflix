@@ -1,4 +1,5 @@
 import "./HomePage.scss";
+import { useParams } from "react-router-dom";
 import VideoPost from "../../components/VideoPost/VideoPost";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
