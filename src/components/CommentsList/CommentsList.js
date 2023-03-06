@@ -2,20 +2,17 @@ import "./CommentsList.scss";
 import Comments from "../Comments/Comments";
 
 const CommentsList = ({ selectedVideo }) => {
-  let selectedVideoComments = selectedVideo.comments;
+  const { comments } = selectedVideo;
+
   return (
     <section className="commentsList">
-      {selectedVideoComments.map((comment) => {
-        return (
-          <Comments
-            id={comment.id}
-            name={comment.name}
-            comment={comment.comment}
-            date={comment.timestamp}
-            key={comment.id}
-          />
-        );
-      })}
+      {comments.map((comment) => (
+        <Comments
+          {...comment}
+          key={comment.id}
+          date={stringDate(comment.timestamp)}
+        />
+      ))}
     </section>
   );
 };

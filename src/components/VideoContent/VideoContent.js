@@ -1,34 +1,24 @@
 import "./VideoContent.scss";
 
-const VideoContent = ({
-  videoContentTitle,
-  videoContentChannel,
-  videoContentImage,
-  videoContentId,
-  updateVideo,
-}) => {
-  const handleClick = (video) => {
-    updateVideo(video);
+function VideoContent({ id, channel, image, title, updateVideo }) {
+  const handleClick = () => {
+    updateVideo(id);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
   return (
-    <>
-      <div
-        className="videoContent-mainContainer"
-        onClick={() => handleClick(videoContentId)}
-      >
-        <img
-          src={videoContentImage}
-          alt="bike trick s thumbnail"
-          className="videoContent__image"
-        ></img>
-        <div className="videoContent-textContainer">
-          <h4 className="videoContent__title">{videoContentTitle}</h4>
-          <p className="videoContent__channel">{videoContentChannel}</p>
-        </div>
+    <div className="videoContent-mainContainer" onClick={handleClick}>
+      <img
+        src={image}
+        alt={`${title} thumbnail`}
+        className="videoContent__image"
+      />
+      <div className="videoContent-textContainer">
+        <h4 className="videoContent__title">{title}</h4>
+        <p className="videoContent__channel">{channel}</p>
       </div>
-    </>
+    </div>
   );
-};
+}
 
 export default VideoContent;

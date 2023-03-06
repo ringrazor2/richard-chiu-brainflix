@@ -4,20 +4,26 @@
 
 .videoPost {
   width: 100%;
+  height: 11.1875rem;
+
   @include tablet {
     height: 24.06rem;
   }
+
   @include desktop {
     @include maxWidth();
     height: 30.3rem;
   }
+
   &-container {
     width: 100%;
     margin-bottom: 1rem;
+
     @include tablet {
       background-color: black;
       padding: 0 2.5rem;
     }
+
     @include desktop {
       padding: 0 13rem;
       margin-bottom: 0;

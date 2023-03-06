@@ -6,7 +6,9 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <img className="header__logo" src={logo} alt="Branflix Logo"></img>
+        <a href="../../index.js">
+          <img className="header__logo" src={logo} alt="Branflix Logo"></img>
+        </a>
         <form className="header__form">
           <div className="header__form-container">
             <input
