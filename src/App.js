@@ -1,13 +1,10 @@
 import "./App.scss";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
+import Header from "./components/Header/Header";
+import HomePage from "./pages/HomePage/HomePage";
 import videosData from "./data/videos.json";
 import detailsData from "./data/video-details.json";
-import Header from "./components/Header/Header";
-import VideoPost from "./components/VideoPost/VideoPost";
-import VideoDetails from "./components/VideoDetails/VideoDetails";
-import CommentsForm from "./components/CommentsForm/CommentsForm";
-import CommentsList from "./components/CommentsList/CommentsList";
-import VideoList from "./components/VideoList/VideoList";
 
 const App = () => {
   const [selectedVideo, setSelectedVideo] = useState(detailsData[0]);
@@ -16,24 +13,26 @@ const App = () => {
     const clickedVideo = detailsData.find((vid) => vid.id === id);
     setSelectedVideo(clickedVideo);
   };
-
   return (
     <>
       <Header />
-      <VideoPost selectedVideo={selectedVideo} />
-      <main className="main">
-        <div className="videoInformation">
-          <VideoDetails selectedVideo={selectedVideo} />
-          <CommentsForm />
-          <CommentsList selectedVideo={selectedVideo} />
-        </div>
-        <VideoList
-          selectedVideo={selectedVideo}
-          videoData={videosData}
-          updateVideo={updateVideo}
-          detailsData={detailsData}
-        />
-      </main>
+      <BrowserRouter>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <HomePage
+                selectedVideo={selectedVideo}
+                updateVideo={updateVideo}
+                videosData={videosData}
+              />
+            }
+          />
+          <Route path="/:id" element={<HomePage />} />
+          {/* <Route path="/upload" element={<UploadPage />} />
+          <Route path="*" element={<ErrorPage />} /> */}
+        </Routes>
+      </BrowserRouter>
     </>
   );
 };
