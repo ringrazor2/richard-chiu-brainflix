@@ -6,7 +6,13 @@ import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import CommentsList from "../../components/CommentsList/CommentsList";
 import VideoList from "../../components/VideoList/VideoList";
 
-const HomePage = ({ selectedVideo, updateVideo, videosData, detailsData }) => {
+const HomePage = ({
+  selectedVideo,
+  updateVideo,
+  videosData,
+  detailsData,
+  id,
+}) => {
   return (
     <>
       <VideoPost selectedVideo={selectedVideo} />
