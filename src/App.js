@@ -2,6 +2,7 @@ import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
+import UploadPage from "./pages/UploadPage/UploadPage";
 import axios from "axios";
 
 const App = () => {
@@ -36,7 +37,6 @@ const App = () => {
 
   return (
     <>
-      <Header />
       <BrowserRouter>
         <Routes>
           <Route
@@ -57,7 +57,7 @@ const App = () => {
               />
             }
           />
-          {/* <Route path="/upload" element={<UploadPage />} /> */}
+          <Route path="/upload" element={<UploadPage />} />
           {/* <Route path="*" element={<ErrorPage />} />  */}
         </Routes>
       </BrowserRouter>

@@ -1,7 +1,7 @@
 import "./UploadForm.scss";
 import UploadDetails from "../UploadDetails/UploadDetails";
 import UploadBanner from "../UploadBanner/UploadBanner";
-
+import UploadButtons from "../UploadButtons/UploadButtons";
 const UploadForm = () => {
   return (
     <>
