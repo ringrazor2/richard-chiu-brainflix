@@ -1,6 +1,6 @@
 import "./VideoPost.scss";
 
-const VideoPost = ({ selectedVideo }) => {
+const VideoPost = ({ selectedVideo}) => {
   return (
     <div className="videoPost-container" id="videoPost">
       <video

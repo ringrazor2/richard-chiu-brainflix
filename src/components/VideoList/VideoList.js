@@ -1,8 +1,8 @@
 import "./VideoList.scss";
 import VideoContent from "../VideoContent/VideoContent";
 
-function VideoList({ videoData, selectedVideo, updateVideo, detailsData }) {
-  const inactiveVideos = videoData.filter(
+function VideoList({ videoList, selectedVideo, setSelectedVideo }) {
+  const inactiveVideos = videoList.filter(
     (vids) => vids.id !== selectedVideo.id
   );
 
@@ -13,8 +13,8 @@ function VideoList({ videoData, selectedVideo, updateVideo, detailsData }) {
         <VideoContent
           key={videoObj.id}
           {...videoObj}
-          updateVideo={updateVideo}
-          detailsData={detailsData}
+          setSelectedVideo={setSelectedVideo}
+          selectedVideo={selectedVideo}
         />
       ))}
     </section>

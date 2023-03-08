@@ -1,4 +1,5 @@
 import "./HomePage.scss";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import VideoPost from "../../components/VideoPost/VideoPost";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
@@ -6,13 +7,28 @@ import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import CommentsList from "../../components/CommentsList/CommentsList";
 import VideoList from "../../components/VideoList/VideoList";
 
-const HomePage = ({
-  selectedVideo,
-  updateVideo,
-  videosData,
-  detailsData,
-  id,
-}) => {
+const HomePage = ({ getVideoListData, getVideoDetailsData }) => {
+  const { id } = useParams();
+  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [videoList, setVideoList] = useState(null);
+
+  useEffect(() => {
+    getVideoListData()
+      .then((response) => {
+        setVideoList(response);
+        return response;
+      })
+      .then((response) => {
+        return getVideoDetailsData(id || response[0].id).then((detailsData) => {
+          setSelectedVideo(detailsData);
+        });
+      });
+  }, [id, getVideoDetailsData, getVideoListData]);
+
+  if (!selectedVideo || !videoList) {
+    return <span>Loading....</span>;
+  }
+
   return (
     <>
       <VideoPost selectedVideo={selectedVideo} />
@@ -24,9 +40,10 @@ const HomePage = ({
         </div>
         <VideoList
           selectedVideo={selectedVideo}
-          videoData={videosData}
-          updateVideo={updateVideo}
-          detailsData={detailsData}
+          setSelectedVide={setSelectedVideo}
+          videoList={videoList}
+          setVideoList={setVideoList}
+          getVideoListData={getVideoListData}
         />
       </main>
     </>

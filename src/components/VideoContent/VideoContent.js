@@ -1,8 +1,7 @@
 import "./VideoContent.scss";
 
-function VideoContent({ id, channel, image, title, updateVideo }) {
+function VideoContent({ channel, image, title }) {
   const handleClick = () => {
-    updateVideo(id);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
