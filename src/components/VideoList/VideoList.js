@@ -1,7 +1,7 @@
 import "./VideoList.scss";
 import VideoContent from "../VideoContent/VideoContent";
-
-function VideoList({ videoList, selectedVideo, setSelectedVideo }) {
+import { Link } from "react-router-dom";
+function VideoList({ videoList, selectedVideo, setSelectedVideo, id }) {
   const inactiveVideos = videoList.filter(
     (vids) => vids.id !== selectedVideo.id
   );
@@ -10,12 +10,14 @@ function VideoList({ videoList, selectedVideo, setSelectedVideo }) {
     <section className="videoList">
       <h3 className="videoList__title">Next Videos</h3>
       {inactiveVideos.map((videoObj) => (
-        <VideoContent
-          key={videoObj.id}
-          {...videoObj}
-          setSelectedVideo={setSelectedVideo}
-          selectedVideo={selectedVideo}
-        />
+        <Link to={`/${videoObj.id}`} key={videoObj.id}>
+          <VideoContent
+            key={videoObj.id}
+            {...videoObj}
+            setSelectedVideo={setSelectedVideo}
+            selectedVideo={selectedVideo}
+          />
+        </Link>
       ))}
     </section>
   );

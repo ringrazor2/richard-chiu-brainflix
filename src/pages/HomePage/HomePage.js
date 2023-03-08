@@ -24,7 +24,7 @@ const HomePage = ({ getVideoListData, getVideoDetailsData }) => {
           setSelectedVideo(detailsData);
         });
       });
-  }, [id, getVideoDetailsData, getVideoListData]);
+  }, [id]);
 
   if (!selectedVideo || !videoList) {
     return <span>Loading....</span>;
@@ -46,6 +46,7 @@ const HomePage = ({ getVideoListData, getVideoDetailsData }) => {
           videoList={videoList}
           setVideoList={setVideoList}
           getVideoListData={getVideoListData}
+          id={id}
         />
       </main>
     </>
