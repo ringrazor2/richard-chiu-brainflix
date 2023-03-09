@@ -27,6 +27,10 @@
 
     &-link {
       width: 100%;
+
+      @include tablet {
+        width: auto;
+      }
     }
     @include tablet {
       margin: 0;
