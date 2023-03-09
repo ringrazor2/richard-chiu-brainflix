@@ -31,6 +31,10 @@ const App = () => {
     }
   }
 
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -51,6 +55,7 @@ const App = () => {
               <HomePage
                 getVideoDetailsData={getVideoDetailsData}
                 getVideoListData={getVideoListData}
+                handleClick={handleClick}
               />
             }
           />

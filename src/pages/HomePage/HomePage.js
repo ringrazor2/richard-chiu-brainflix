@@ -7,7 +7,7 @@ import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import CommentsList from "../../components/CommentsList/CommentsList";
 import VideoList from "../../components/VideoList/VideoList";
 
-const HomePage = ({ getVideoListData, getVideoDetailsData }) => {
+const HomePage = ({ getVideoListData, getVideoDetailsData, handleClick }) => {
   const { id } = useParams();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videoList, setVideoList] = useState(null);
@@ -45,6 +45,7 @@ const HomePage = ({ getVideoListData, getVideoDetailsData }) => {
           setVideoList={setVideoList}
           getVideoListData={getVideoListData}
           id={id}
+          handleClick={handleClick}
         />
       </main>
     </>

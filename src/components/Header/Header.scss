@@ -44,12 +44,10 @@
       margin: 0;
     }
   }
-  // &__form {
-  //   height: 110px;
-  // }
 
   &__form-container {
-    @include flex(row);
+    @include flex(column);
+    flex-wrap: nowrap;
     justify-content: space-between;
 
     @include tablet {
@@ -61,6 +59,13 @@
     @include desktop {
       margin-right: 2.25rem;
     }
+  }
+  &__form {
+    height: 110px;
+  }
+  &__form-search-container {
+    @include flex(row);
+    justify-content: space-between;
   }
 
   &__button {
