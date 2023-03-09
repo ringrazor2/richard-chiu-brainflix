@@ -1,3 +1,35 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.uploadDetails {
+  padding: 1rem;
+  &__title,
+  &__description {
+    display: block;
+    color: $silver;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+  &__description {
+    margin-top: 1rem;
+  }
+
+  &__title-input,
+  &__description-input {
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    background-color: $alabaster;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  &__description-input {
+    padding-bottom: 60px;
+  }
+}

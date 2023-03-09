@@ -19,7 +19,9 @@
   }
 
   &__logo {
+    display: block;
     height: 1.56rem;
+    margin: 0 auto;
     margin-bottom: 1rem;
     cursor: pointer;
 
@@ -57,7 +59,7 @@
     background-position: 5%;
     background-size: 1.5rem;
     color: white;
-    width: 100%;
+    width: 89vw;
     cursor: pointer;
     padding: 0.9rem;
     border: none;

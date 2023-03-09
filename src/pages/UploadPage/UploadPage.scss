@@ -1,3 +1,9 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.upload-title {
+  font-weight: 600;
+  border-top: 1px solid $mercury;
+  padding: 1rem;
+}

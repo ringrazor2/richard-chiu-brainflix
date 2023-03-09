@@ -1,0 +1,74 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.uploadButtons {
+  padding: 1rem;
+  padding-top: 0.5rem;
+
+  &__publish {
+    @include flex(row);
+    background-color: $flixBlue;
+    background-image: url("../../assets/images//publish.svg");
+    background-repeat: no-repeat;
+    background-position: 5%;
+    background-size: 1.5rem;
+    color: white;
+    width: 100%;
+    cursor: pointer;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 0.375rem;
+    justify-content: center;
+
+    @include tablet {
+      width: 10rem;
+      order: 2;
+      padding: 0.65rem;
+    }
+
+    &-text {
+      font-weight: 600;
+      font-size: 0.875rem;
+      align-self: center;
+      position: relative;
+
+      @include tablet {
+        font-size: 0.9rem;
+        padding-left: 0.625rem;
+      }
+    }
+
+    &-icon {
+      height: 1.75rem;
+      align-self: flex-start;
+      position: relative;
+      left: 0;
+
+      @include tablet {
+        height: 1.5rem;
+      }
+    }
+
+    &:hover {
+      background-color: $flixDarkBlue;
+    }
+  }
+
+  &__cancel {
+    border: none;
+    background-color: White;
+    width: 100%;
+    cursor: pointer;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 0.375rem;
+    justify-content: center;
+    margin: 1rem 0;
+
+    &-text {
+      font-weight: 600;
+      color: $flixBlue;
+    }
+  }
+}

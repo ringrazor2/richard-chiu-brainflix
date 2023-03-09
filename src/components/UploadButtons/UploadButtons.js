@@ -2,10 +2,14 @@ import "./UploadButtons.scss";
 
 const UploadButtons = () => {
   return (
-    <>
-      <button className="uploadButtons__publish">PUBLISH</button>
-      <button className="uploadButtons__cancel">CANCEL</button>
-    </>
+    <div className="uploadButtons">
+      <button className="uploadButtons__publish">
+        <p className="uploadButtons__publish-text">PUBLISH</p>
+      </button>
+      <button className="uploadButtons__cancel">
+        <p className="uploadButtons__cancel-text">CANCEL</p>
+      </button>
+    </div>
   );
 };
 
