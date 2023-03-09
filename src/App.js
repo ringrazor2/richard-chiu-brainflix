@@ -1,10 +1,10 @@
 import "./App.scss";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import axios from "axios";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
 import UploadPage from "./pages/UploadPage/UploadPage";
-import axios from "axios";
-
+import ErrorPage from "./pages/ErrorPage/ErrorPage";
 const App = () => {
   const apiKey = "84782a7a-00f9-4ef6-95f6-c179b567af2c";
 
@@ -30,10 +30,6 @@ const App = () => {
       console.error(error);
     }
   }
-  // const updateVideo = (id) => {
-  //   const clickedVideo = detailsData.find((vid) => vid.id === id);
-  //   setSelectedVideo(clickedVideo);
-  // };
 
   return (
     <>
@@ -59,7 +55,7 @@ const App = () => {
             }
           />
           <Route path="/upload" element={<UploadPage />} />
-          {/* <Route path="*" element={<ErrorPage />} />  */}
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </BrowserRouter>
     </>
