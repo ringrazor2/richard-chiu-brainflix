@@ -1,10 +1,12 @@
 import "./CommentsForm.scss";
 import mohan from "../../assets/images/Mohan-muruge.jpg";
 
-const CommentsForm = () => {
+const CommentsForm = ({ selectedVideoComments }) => {
   return (
     <section className="commentsForm-container">
-      <h4 className="commentsForm__amount">3 Comments</h4>
+      <h4 className="commentsForm__amount">
+        {selectedVideoComments.length} Comments
+      </h4>
       <form className="commentsForm">
         <div className="avatarImage-container">
           <img
