@@ -12,19 +12,17 @@ const Header = () => {
         </NavLink>
         <form className="header__form">
           <div className="header__form-container">
-            <div className="header__form-search-container">
-              <input
-                className="header__form-search"
-                type="search"
-                name="search"
-                placeholder="Search"
-              ></input>
-              <img
-                src={mohan}
-                className="defaultAvatar"
-                alt="Default avatar"
-              ></img>
-            </div>
+            <input
+              className="header__form-search"
+              type="search"
+              name="search"
+              placeholder="Search"
+            ></input>
+            <img
+              src={mohan}
+              className="defaultAvatar"
+              alt="Default avatar"
+            ></img>
             <NavLink to="/upload" className="header__button-link">
               <button className="header__button">
                 <p className="header__button-text">UPLOAD</p>
