@@ -6,8 +6,8 @@ const UploadForm = () => {
   return (
     <div className="uploadForm">
       <div className="uploadForm-mainContainer">
-        <UploadBanner className="uploadBanner" />
-        <UploadDetails className="uploadDetails" />
+        <UploadBanner />
+        <UploadDetails />
       </div>
       <UploadButtons />
     </div>

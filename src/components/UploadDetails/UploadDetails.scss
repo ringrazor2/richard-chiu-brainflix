@@ -4,6 +4,12 @@
 
 .uploadDetails {
   padding: 1rem;
+
+  @include tablet {
+    margin: 0 3rem;
+    padding: 0.5rem 0 1.5rem 0;
+    border-bottom: 1px solid $mercury;
+  }
   &__title,
   &__description {
     display: block;
