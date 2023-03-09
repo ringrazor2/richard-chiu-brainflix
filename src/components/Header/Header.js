@@ -23,7 +23,7 @@ const Header = () => {
               className="defaultAvatar"
               alt="Default avatar"
             ></img>
-            <NavLink to="/upload">
+            <NavLink to="/upload" className="header__button-link">
               <button className="header__button">
                 <p className="header__button-text">UPLOAD</p>
               </button>

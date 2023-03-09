@@ -10,7 +10,7 @@ function VideoList({ videoList, selectedVideo, setSelectedVideo, id }) {
     <section className="videoList">
       <h3 className="videoList__title">Next Videos</h3>
       {inactiveVideos.map((videoObj) => (
-        <Link to={`/${videoObj.id}`} key={videoObj.id}>
+        <Link to={`/video/${videoObj.id}`} key={videoObj.id}>
           <VideoContent key={videoObj.id} {...videoObj} />
         </Link>
       ))}

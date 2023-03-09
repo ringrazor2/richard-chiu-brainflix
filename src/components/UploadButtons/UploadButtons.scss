@@ -8,7 +8,7 @@
   @include tablet {
     padding: 1.5rem 3rem;
     @include flex(row);
-    flex-direction: flex-end;
+    flex-direction: row-reverse;
   }
 
   &__publish {
@@ -27,7 +27,7 @@
     justify-content: center;
 
     @include tablet {
-      order: 2;
+      order: 1;
       width: 12rem;
       padding: 0;
       height: 45px;
@@ -76,6 +76,7 @@
     @include tablet {
       width: 12rem;
       padding: 0;
+      order: 2;
     }
 
     &-text {

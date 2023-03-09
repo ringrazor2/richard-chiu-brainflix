@@ -1,6 +1,7 @@
 import "./HomePage.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import Header from "../../components/Header/Header";
 import VideoPost from "../../components/VideoPost/VideoPost";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
@@ -31,6 +32,7 @@ const HomePage = ({ getVideoListData, getVideoDetailsData }) => {
 
   return (
     <>
+      <Header />
       <VideoPost selectedVideo={selectedVideo} />
       <main className="main">
         <div className="videoInformation">
