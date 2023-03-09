@@ -1,3 +1,19 @@
 @use "../../styles/partials/global" as *;
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.uploadForm-mainContainer {
+  margin: 0 1rem;
+  @include tablet {
+    margin: 0 3rem;
+    border-top: 1px $mercury solid;
+    padding-top: 1.5rem;
+  }
+  @include desktop {
+    @include flex(row);
+    flex-wrap: nowrap;
+    margin: 0 7rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid $mercury;
+  }
+}

@@ -10,4 +10,7 @@
   @include tablet {
     padding: 1.5rem 3rem;
   }
+  @include desktop {
+    padding: 1.5rem 7rem;
+  }
 }

@@ -3,13 +3,9 @@
 @use "../../styles/partials/mixins" as *;
 
 .uploadBanner {
-  margin: 0 1rem;
-  @include tablet {
-    margin: 0 3rem;
-    border-top: 1px $mercury solid;
-    padding-top: 1.5rem;
+  @include desktop {
+    width: 40%;
   }
-
   &__title {
     font-size: 14px;
     color: $silver;
@@ -22,6 +18,9 @@
 
     @include tablet {
       width: 50%;
+    }
+    @include desktop {
+      width: 100%;
     }
   }
 }

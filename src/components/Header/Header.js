@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        <NavLink to="/">
+        <NavLink className="header__logo-link" to="/">
           <img className="header__logo" src={logo} alt="Branflix Logo"></img>
         </NavLink>
         <form className="header__form">
