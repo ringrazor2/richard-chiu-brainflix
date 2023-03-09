@@ -12,6 +12,7 @@ const Header = () => {
         </NavLink>
         <form className="header__form">
           <div className="header__form-container">
+            {/* <div className="header__form-search-container"> */}
             <input
               className="header__form-search"
               type="search"
@@ -28,6 +29,7 @@ const Header = () => {
                 <p className="header__button-text">UPLOAD</p>
               </button>
             </NavLink>
+            {/* </div> */}
           </div>
         </form>
       </header>
