@@ -1,5 +1,5 @@
 import "./VideoDetails.scss";
-
+import stringDateFull from "../../utilities/scripts/stringToDate";
 import viewsIcon from "../../assets/images/views.svg";
 import likesIcon from "../../assets/images/likes.svg";
 
@@ -30,12 +30,4 @@ const VideoDetails = ({ selectedVideo }) => {
   );
 };
 
-function stringDateFull(dateCode) {
-  const date = new Date(dateCode);
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  const dateString = `${month}/${day}/${year}`;
-  return dateString;
-}
 export default VideoDetails;
