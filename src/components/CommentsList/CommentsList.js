@@ -1,9 +1,7 @@
 import "./CommentsList.scss";
 import Comments from "../Comments/Comments";
 
-const CommentsList = ({ selectedVideo }) => {
-  const { comments } = selectedVideo;
-
+const CommentsList = ({ comments }) => {
   return (
     <section className="commentsList">
       {comments.map((comment) => (

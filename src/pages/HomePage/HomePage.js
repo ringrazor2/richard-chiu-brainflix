@@ -69,7 +69,7 @@ const HomePage = () => {
             selectedVideo={selectedVideo}
             selectedVideoComments={selectedVideo.comments}
           />
-          <CommentsList selectedVideo={selectedVideo} />
+          <CommentsList comments={selectedVideo.comments} />
         </div>
         <VideoList
           selectedVideo={selectedVideo}
