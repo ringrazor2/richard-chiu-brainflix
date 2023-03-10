@@ -33,7 +33,7 @@
     font-size: 0.8125rem;
     color: $silver;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
   }
   &__input {
     padding: 0.5rem;
@@ -46,7 +46,7 @@
     @include tablet {
       padding-bottom: 0.5rem;
       &::placeholder {
-        padding-left: 4px;
+        padding-left: 0.25rem;
       }
     }
 

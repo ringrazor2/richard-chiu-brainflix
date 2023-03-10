@@ -3,10 +3,10 @@
 @use "../../styles/partials/mixins" as *;
 
 .uploadDetails {
-  padding-top: 12px;
+  padding-top: 0.75rem;
   padding-bottom: 1rem;
   @include tablet {
-    padding: 12px 0 1.5rem 0;
+    padding: 0.75rem 0 1.5rem 0;
     border-bottom: 1px solid $mercury;
   }
   @include desktop {
@@ -19,9 +19,9 @@
   &__description {
     display: block;
     color: $silver;
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 0.25rem;
   }
   &__description {
     margin-top: 1rem;
@@ -32,7 +32,7 @@
     border: 1px solid $mercury;
     border-radius: 4px;
     width: 100%;
-    padding: 10px;
+    padding: 0.625rem;
     background-color: $alabaster;
 
     &::placeholder {
@@ -41,6 +41,6 @@
   }
 
   &__description-input {
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
   }
 }
