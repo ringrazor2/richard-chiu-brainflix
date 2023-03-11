@@ -26,7 +26,7 @@ const CommentsForm = ({ selectedVideoComments }) => {
               placeholder="Add a new comment"
             ></input>
           </div>
-          <button className="commentsForm__button">
+          <button className="commentsForm__button" disabled>
             <p className="commentsForm__button-text">COMMENT</p>
           </button>
         </div>
