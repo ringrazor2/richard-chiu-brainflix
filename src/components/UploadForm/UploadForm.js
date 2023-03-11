@@ -6,7 +6,7 @@ import UploadBanner from "../UploadBanner/UploadBanner";
 import UploadButtons from "../UploadButtons/UploadButtons";
 
 const UploadForm = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -14,12 +14,12 @@ const UploadForm = () => {
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
 
-    setIsSubmitting(true);
+    // setIsSubmitting(true);
     modal.classList.toggle("hidden");
     overlay.classList.toggle("hidden");
 
     setTimeout(() => {
-      setIsSubmitting(false);
+      // setIsSubmitting(false);
       navigate("/");
     }, 2000);
   };
@@ -35,7 +35,7 @@ const UploadForm = () => {
         <UploadBanner />
         <UploadDetails />
       </div>
-      <UploadButtons isSubmitting={isSubmitting} />
+      <UploadButtons />
     </form>
   );
 };
