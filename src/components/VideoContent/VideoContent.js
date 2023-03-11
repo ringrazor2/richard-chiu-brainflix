@@ -1,6 +1,10 @@
 import "./VideoContent.scss";
 
-function VideoContent({ channel, image, title, handleClick }) {
+function VideoContent({ channel, image, title }) {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="videoContent-mainContainer" onClick={handleClick}>
       <img

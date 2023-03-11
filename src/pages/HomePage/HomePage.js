@@ -38,10 +38,6 @@ const HomePage = () => {
     }
   }
 
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
   useEffect(() => {
     getVideoListData()
       .then((response) => {
@@ -78,7 +74,6 @@ const HomePage = () => {
           setVideoList={setVideoList}
           getVideoListData={getVideoListData}
           id={id}
-          handleClick={handleClick}
         />
       </main>
     </>
