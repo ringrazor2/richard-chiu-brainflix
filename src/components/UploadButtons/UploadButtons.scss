@@ -27,7 +27,7 @@
     justify-content: center;
 
     @include tablet {
-      order: 1;
+      order: 0;
       width: 12rem;
       padding: 0;
       height: 2.8rem;
@@ -76,7 +76,6 @@
     @include tablet {
       width: 12rem;
       padding: 0;
-      order: 2;
     }
 
     &-text {
