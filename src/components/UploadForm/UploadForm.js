@@ -6,20 +6,17 @@ import UploadBanner from "../UploadBanner/UploadBanner";
 import UploadButtons from "../UploadButtons/UploadButtons";
 
 const UploadForm = () => {
-  // const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const modal = document.querySelector(".modal");
     const overlay = document.querySelector(".overlay");
 
-    // setIsSubmitting(true);
     modal.classList.toggle("hidden");
     overlay.classList.toggle("hidden");
 
     setTimeout(() => {
-      // setIsSubmitting(false);
       navigate("/");
     }, 2000);
   };
