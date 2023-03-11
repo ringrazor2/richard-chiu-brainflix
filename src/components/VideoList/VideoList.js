@@ -1,7 +1,7 @@
 import "./VideoList.scss";
 import VideoContent from "../VideoContent/VideoContent";
 import { Link } from "react-router-dom";
-function VideoList({ videoList, selectedVideo, handleClick }) {
+function VideoList({ videoList, selectedVideo }) {
   const inactiveVideos = videoList.filter(
     (vids) => vids.id !== selectedVideo.id
   );

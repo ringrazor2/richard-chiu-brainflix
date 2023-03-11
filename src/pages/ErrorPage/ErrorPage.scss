@@ -3,6 +3,8 @@
 @use "../../styles/partials/mixins" as *;
 
 .errorPage {
+  @include flex(column);
+  align-items: center;
   width: 100%;
   height: 100vh;
   padding: 1rem;
@@ -19,10 +21,9 @@
     text-decoration: none;
     border: 1px solid #efefef;
     padding: 0.5em;
+    margin-top: 5rem;
     border-radius: 3px;
     float: left;
-    margin: 6em 0 0 -155px;
-    left: 50%;
     position: relative;
     transition: all 0.3s linear;
 
@@ -33,14 +34,12 @@
   }
 
   &__message {
-    font-size: 2em;
-    text-align: center;
+    font-size: 2rem;
     font-weight: 100;
   }
 
   &__title {
-    text-align: center;
-    font-size: 15em;
+    font-size: 10rem;
     font-weight: 100;
     text-shadow: #0062cc 1px 1px, #0062cc 2px 2px, #0062cc 3px 3px,
       #0062cd 4px 4px, #0062cd 5px 5px, #0062cd 6px 6px, #0062cd 7px 7px,

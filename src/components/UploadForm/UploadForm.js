@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./UploadForm.scss";
 import UploadDetails from "../UploadDetails/UploadDetails";
@@ -17,6 +16,8 @@ const UploadForm = () => {
     overlay.classList.toggle("hidden");
 
     setTimeout(() => {
+      modal.classList.toggle("hidden");
+      overlay.classList.toggle("hidden");
       navigate("/");
     }, 2000);
   };

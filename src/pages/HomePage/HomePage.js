@@ -1,52 +1,43 @@
-import "./HomePage.scss";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
+import LoadingPage from "../LoadingPage/LoadingPage";
 import VideoPost from "../../components/VideoPost/VideoPost";
 import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import CommentsList from "../../components/CommentsList/CommentsList";
 import VideoList from "../../components/VideoList/VideoList";
-import LoadingPage from "../LoadingPage/LoadingPage";
+import "./HomePage.scss";
+
+const apiKey = "84782a7a-00f9-4ef6-95f6-c179b567af2c";
+const videoUrl = `https://project-2-api.herokuapp.com/videos/?api_key=${apiKey}`;
 
 const HomePage = () => {
   const { id } = useParams();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videoList, setVideoList] = useState(null);
 
-  const apiKey = "84782a7a-00f9-4ef6-95f6-c179b567af2c";
-
-  async function getVideoListData() {
+  async function fetchData(url) {
     try {
-      const videoUrl = `https://project-2-api.herokuapp.com/videos/?api_key=${apiKey}`;
-      const response = await axios.get(videoUrl + apiKey);
-      const data = response.data;
-      return data;
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  async function getVideoDetailsData(id) {
-    try {
-      const response = await axios.get(
-        `https://project-2-api.herokuapp.com/videos/${id}/?api_key=` + apiKey
-      );
-      const data = response.data;
-      return data;
+      const response = await axios.get(url);
+      return response.data;
     } catch (error) {
       console.error(error);
     }
   }
 
   useEffect(() => {
-    getVideoListData()
+    fetchData(videoUrl)
       .then((response) => {
         setVideoList(response);
         return response;
       })
       .then((response) => {
-        return getVideoDetailsData(id || response[0].id).then((detailsData) => {
+        return fetchData(
+          `https://project-2-api.herokuapp.com/videos/${
+            id || response[0].id
+          }/?api_key=${apiKey}`
+        ).then((detailsData) => {
           setSelectedVideo(detailsData);
         });
       });
@@ -73,7 +64,6 @@ const HomePage = () => {
           setSelectedVide={setSelectedVideo}
           videoList={videoList}
           setVideoList={setVideoList}
-          getVideoListData={getVideoListData}
           id={id}
         />
       </main>

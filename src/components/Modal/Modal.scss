@@ -4,18 +4,24 @@
 
 .modal {
   position: absolute;
+  @include flex(row);
+  justify-content: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 70%;
   background-color: white;
   padding: 6rem;
-  padding-left: 9rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
 
   &__message {
+    font-size: 1rem;
     color: $flixBlue;
+
+    @include tablet {
+      font-size: 1.75rem;
+    }
   }
 }
