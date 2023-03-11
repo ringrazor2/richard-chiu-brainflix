@@ -7,6 +7,7 @@ import VideoDetails from "../../components/VideoDetails/VideoDetails";
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import CommentsList from "../../components/CommentsList/CommentsList";
 import VideoList from "../../components/VideoList/VideoList";
+import LoadingPage from "../LoadingPage/LoadingPage";
 
 const HomePage = () => {
   const { id } = useParams();
@@ -52,7 +53,7 @@ const HomePage = () => {
   }, [id]);
 
   if (!selectedVideo || !videoList) {
-    return <span>Loading....</span>;
+    return <LoadingPage />;
   }
 
   return (
