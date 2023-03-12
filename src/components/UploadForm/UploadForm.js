@@ -1,23 +1,21 @@
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./UploadForm.scss";
 import UploadDetails from "../UploadDetails/UploadDetails";
 import UploadBanner from "../UploadBanner/UploadBanner";
 import UploadButtons from "../UploadButtons/UploadButtons";
+import Overlay from "../../components/Overlay/Overlay";
+import Modal from "../../components/Modal/Modal";
 
 const UploadForm = () => {
   const navigate = useNavigate();
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const modal = document.querySelector(".modal");
-    const overlay = document.querySelector(".overlay");
-
-    modal.classList.toggle("hidden");
-    overlay.classList.toggle("hidden");
-
+    setIsModalVisible(true);
     setTimeout(() => {
-      modal.classList.toggle("hidden");
-      overlay.classList.toggle("hidden");
+      setIsModalVisible(false);
       navigate("/");
     }, 2000);
   };
@@ -34,6 +32,12 @@ const UploadForm = () => {
         <UploadDetails />
       </div>
       <UploadButtons />
+      {isModalVisible && (
+        <>
+          <Modal />
+          <Overlay />
+        </>
+      )}
     </form>
   );
 };
