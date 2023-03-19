@@ -9,39 +9,42 @@ import CommentsList from "../../components/CommentsList/CommentsList";
 import VideoList from "../../components/VideoList/VideoList";
 import "./HomePage.scss";
 
-const apiKey = "84782a7a-00f9-4ef6-95f6-c179b567af2c";
-const videoUrl = `https://project-2-api.herokuapp.com/videos/?api_key=${apiKey}`;
+const REACT_APP_SERVER_URL = process.env.REACT_APP_SERVER_URL;
 
 const HomePage = () => {
   const { id } = useParams();
   const [selectedVideo, setSelectedVideo] = useState(null);
   const [videoList, setVideoList] = useState(null);
 
-  async function fetchData(url) {
-    try {
-      const response = await axios.get(url);
-      return response.data;
-    } catch (error) {
-      console.error(error);
+  useEffect(() => {
+    async function fetchVideoList() {
+      try {
+        const response = await axios.get(`http://localhost:8000/videos`);
+        setVideoList(response.data);
+      } catch (error) {
+        console.error(error);
+      }
     }
-  }
+
+    fetchVideoList();
+  }, []);
 
   useEffect(() => {
-    fetchData(videoUrl)
-      .then((response) => {
-        setVideoList(response);
-        return response;
-      })
-      .then((response) => {
-        return fetchData(
-          `https://project-2-api.herokuapp.com/videos/${
-            id || response[0].id
-          }/?api_key=${apiKey}`
-        ).then((detailsData) => {
-          setSelectedVideo(detailsData);
-        });
-      });
-  }, [id]);
+    async function fetchVideoDetails() {
+      try {
+        const response = await axios.get(
+          `http://localhost:8000/videos/${id || videoList[0].id}`
+        );
+        setSelectedVideo(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    if (videoList) {
+      fetchVideoDetails();
+    }
+  }, [id, videoList]);
 
   if (!selectedVideo || !videoList) {
     return <LoadingPage />;
