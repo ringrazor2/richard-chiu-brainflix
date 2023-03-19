@@ -5,7 +5,7 @@ const CommentsForm = ({ selectedVideoComments }) => {
   return (
     <section className="commentsForm-container">
       <h4 className="commentsForm__amount">
-        {!selectedVideoComments.length ? 0 : selectedVideoComments.length}  Comments
+        {selectedVideoComments ? selectedVideoComments.length : 0} Comments
       </h4>
       <form className="commentsForm">
         <div className="avatarImage-container">

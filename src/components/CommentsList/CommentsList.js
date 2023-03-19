@@ -4,13 +4,14 @@ import Comments from "../Comments/Comments";
 const CommentsList = ({ comments }) => {
   return (
     <section className="commentsList">
-      {comments.map((comment) => (
-        <Comments
-          {...comment}
-          key={comment.id}
-          date={stringDate(comment.timestamp)}
-        />
-      ))}
+      {comments &&
+        comments.map((comment) => (
+          <Comments
+            {...comment}
+            key={comment.id}
+            date={stringDate(comment.timestamp)}
+          />
+        ))}
     </section>
   );
 };
