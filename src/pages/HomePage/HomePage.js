@@ -19,7 +19,7 @@ const HomePage = () => {
   useEffect(() => {
     async function fetchVideoList() {
       try {
-        const response = await axios.get(`http://localhost:8000/videos`);
+        const response = await axios.get(`${REACT_APP_SERVER_URL}/videos`);
         setVideoList(response.data);
       } catch (error) {
         console.error(error);

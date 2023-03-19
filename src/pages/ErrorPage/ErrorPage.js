@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
-    <div className="errorPage">
-      <h1 className="errorPage__title">404</h1>
-      <p className="errorPage__message">Oops! Something is wrong.</p>
-      <Link to="/" className="errorPage__anchor">
+    <div className="error-page">
+      <h1 className="error-page__title">404</h1>
+      <p className="error-page__message">Oops! Something is wrong.</p>
+      <Link to="/" className="error-page__anchor">
         You should go back home, it's better.
       </Link>
     </div>

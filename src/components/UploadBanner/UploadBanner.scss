@@ -2,7 +2,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.uploadBanner {
+.upload-banner {
   @include desktop {
     width: 40%;
   }

@@ -2,7 +2,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.uploadButtons {
+.upload-buttons {
   padding: 1rem;
   padding-top: 0.5rem;
   @include tablet {

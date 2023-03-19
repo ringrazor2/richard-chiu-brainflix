@@ -2,10 +2,10 @@ import "./UploadBanner.scss";
 import uploadThumbnail from "../../assets/images/Upload-video-preview.jpg";
 const UploadBanner = () => {
   return (
-    <div className="uploadBanner">
-      <h4 className="uploadBanner__title">VIDEO THUMBNAIL</h4>
+    <div className="upload-banner">
+      <h4 className="upload-banner__title">VIDEO THUMBNAIL</h4>
       <img
-        className="uploadBanner__thumbnail"
+        className="upload-banner__thumbnail"
         src={uploadThumbnail}
         alt="upload thumbnail"
       ></img>

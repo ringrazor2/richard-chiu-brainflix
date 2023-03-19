@@ -34,11 +34,11 @@ const UploadForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="uploadForm"
+      className="upload-form"
       method="POST"
-      name="uploadForm"
+      name="upload-form"
     >
-      <div className="uploadForm-mainContainer">
+      <div className="upload-form-mainContainer">
         <UploadBanner />
         <UploadDetails handleInputChange={handleInputChange} />
       </div>

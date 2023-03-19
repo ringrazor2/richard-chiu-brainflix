@@ -2,7 +2,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.uploadForm-mainContainer {
+.upload-form-mainContainer {
   margin: 0 1rem;
   @include tablet {
     margin: 0 3rem;

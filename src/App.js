@@ -6,17 +6,15 @@ import UploadPage from "./pages/UploadPage/UploadPage";
 import ErrorPage from "./pages/ErrorPage/ErrorPage";
 const App = () => {
   return (
-    <>
-      <BrowserRouter>
-        <Header />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="video/:id" element={<HomePage />} />
-          <Route path="/upload" element={<UploadPage />} />
-          <Route path="*" element={<ErrorPage />} />
-        </Routes>
-      </BrowserRouter>
-    </>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="video/:id" element={<HomePage />} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 };
 

@@ -2,7 +2,7 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
 
-.errorPage {
+.error-page {
   @include flex(column);
   align-items: center;
   width: 100%;
